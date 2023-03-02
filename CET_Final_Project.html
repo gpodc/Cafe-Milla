@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Cafe'millia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous" />
+	<style>
+		body {
+			background-color: #e4bc84;
+            margin-top: 2rem;
+		}
+        section{
+            padding-top: 70px;
+        }
+        .navBar{    
+            position: fixed;
+            margin-top: -2rem;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            gap: 2rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: space-evenly;
+            font-family: 'Raleway', sans-serif;
+        }
+        .navBar a{
+            text-decoration: none;
+            color: #d2c1b0;
+        }
+        .navBar ul{
+            margin: auto;
+        }
+        .navBar ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 0 20px;
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px;
+        }
+        .navBar ul li::after{
+            position: relative;
+            content: '';
+            display: block;
+            background-color: #ad6d2f;
+            height: 5px;
+            width: 0;
+            transition: 0.3s;
+            bottom: 5px;
+        }
+        .navBar ul li:hover::after{
+            width: 100%;
+        }
+        .CafeBar{
+            font-size: 22px;
+            font-weight: bolder;
+            margin:auto;
+            margin-right: 30%;  
+        }
+            
+		h1 {
+			color: #80411e;
+			text-align: center;
+		}
+		.container {
+			margin: 0 auto;
+			max-width: 1600px;
+			padding: 20px;
+		}
+		hr {
+			border: 1px solid #80411e;
+			margin: 20px 0;
+		}
+        .menu-container{
+            display: flex;
+            padding: 2rem;
+            gap: 2rem;
+            
+        }
+        .menu-container .menu-item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+            padding-top: 0;
+            align-content: center;
+            transition: transform .2s; /* Animation */
+        }
+        .menu-container .menu-item img{
+            height: 380px;
+            width: 253px;
+            margin: auto;
+            transition: transform .2s; 
+        }
+        .menu-container .americano img:hover{
+            transform: scale(1.6); 
+        }
+        .menu-container .vanilla-latte img:hover{
+            transform: scale(1.3); 
+        }
+        .menu-container .caramel-latte img:hover{
+            transform: scale(1.3); 
+        }
+        .menu-container .spanish-latte img:hover{
+            transform: scale(1.3);
+        }
+
+        .menu-container .menu-item p{
+            text-align: center;
+        }
+        .menu-container .menu-item h3{
+            display: block;
+            text-align: center;
+        }
+        #home {
+            background-image: url('img/home-blurred.png');
+            background-size: cover;  
+            height: 800px;
+        }
+        #home-container {
+            float: right;
+            padding-top: 200px;
+            padding-right: 100px;
+            width: 700px;
+            height: auto;
+            line-height: 2rem;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .logopage{
+            display: flex;
+            gap: 5rem;
+            padding: 5rem;
+
+        }
+        .logopage .logo {
+            border-radius: 20%;
+        }
+        .logopage .logopageText{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: space-around;
+            padding-top: 38px;
+        }
+        .logopage .logopageText p{
+            font-size: 20px;
+        }
+        .logopage .logopageSocials{
+            display: flex;
+            gap: 5rem;
+            padding: 20px;
+            padding-top: 50px;
+        }
+        .logopage .logopageSocials img{
+            height: 50px;
+            width: 50px;
+        }
+
+
+
+	</style>
+</head>
+<body>
+    <div class="navBar">
+        <div class="CafeBar"><a href="#home">Cafe'millia</a>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </div>
+    <div class="container" id="page">
+		<section id="home">
+            <div id="home-container">
+            <div id="home-container2">
+                <div id="home-bg">
+                <div id="home-header">
+                    <h1 style="color: #37251b; font-size: 70px; text-shadow: 2px 2px #d2c1b0; ">Welcome to Cafe'millia</h1>
+                </div>
+                <div id="description" style="color: #d2c1b0; padding-left: 20px; text-shadow: 2px 2px #5f4030;">
+                    <p>A Sweet? Strong? Or a Mixture of both? Whatever coffee suits your palate our shop got you covered. Some of the most popular types and brews of coffee delivered straight to your door. Wherever and whenever, just browse our menu and find what suits your preference. Cafe’millia, coffee that warms your heart.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+		</section>
+		<hr>
+		<section id="menu">
+			<h2>Our Menu</h2>
+            <div class="menu-container" id="menu-con">
+                <div class="menu-item americano">
+                    <img src="img/AMERICANO.png" alt="Americano">
+                    <h3>Americano</h3>
+                    <p>A staple coffee type, a mixture of typically hot water and espresso. Perfect for people who loves a stronger coffee.</p>
+                </div>
+                <div class="menu-item vanilla-latte">
+                    <img src="img/vanilla iced latte.png" alt="Vanilla Iced Latte">
+                    <h3>Vanilla Latte</h3>
+                    <p> A sweetened strong brewed coffee that is perfect for vanilla and sweets lover. Typically served as a cold brew.</p>
+                </div>
+                <div class="menu-item caramel-latte">
+                    <img src="img/CARAMEL LATTE 2.png" alt="Caramel Latte">
+                    <h3>Caramel Latte</h3>
+                    <p>A mixture of espresso along with caramel syrup and pouring steamed milk on top gives this latte a sweetened flavor.</p>
+                </div>
+                <div class="menu-item spanish-latte">
+                    <img src="img/SPANISH LATTE.png" alt="Spanish Latte">
+                    <h3>Spanish Latte</h3>
+                    <p>A mixture of espresso-based drink with either normal milk or condensed milk or both. It is typically sweeter than normal lattes.</p>
+                </div>
+            </div>
+		</section>
+		<hr>
+		<section id="about">
+            <div class="logopage" id="about-us">
+            <img src="img/logo.png" class="logo" style="width: 400px; height: auto;">
+                <div class="logopageText">
+                    <h2>Our Love for Coffee</h2>
+                    <p>Café'millia got its beginnings as a group of friends' pastime. They were all oriented toward coffee and enjoyed brewing various variations of some of the most well-liked coffee varieties. They began modestly by developing their own version of popular brews and offering them to local residents. They gradually gained popularity to the point that they made the decision to grow by
+                        opening an online store in order to serve a bigger population with their coffee.</p>
+                        <div class="logopageSocials">
+                            <a href="www.facebook.com"><img src="img/facebook.png" alt="Facebook"></a>
+                            <a href="https://twitter.com/"><img src="img/twitter.png" alt="Twitter"></a>
+                            <a href="https://www.tiktok.com/"><img src="img/tik-tok.png" alt="TikTok"></a>
+                            <a href="instagram.com"><img src="img/instagram.png" alt="Instagram"></a>
+                        </div>
+                    </div>
+                
+            
+            </div>
+        </section>
+	</div>
+</body>
+</html>
